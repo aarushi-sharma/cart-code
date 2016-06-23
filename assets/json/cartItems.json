@@ -1,0 +1,99 @@
+{
+	"items":[
+	{
+		"img":"Asafoetida",
+                "brand":"MDH",
+		"name":"Asafoetida",
+		"weight":"500 gm",
+		"price":"100",
+                "quantity":0
+	},
+	{
+		"img":"bayleaf",
+                "brand":"Catch",
+		"name":"Bay leaf",
+		"weight":"100 gm",
+		"price":"50",
+                "quantity":0	
+	},
+	{
+		"img":"BlackCardamom",
+                "brand":"MDH",
+		"name":"Black Cardamom",
+		"weight":"200 gm",
+		"price":"150",
+                "quantity":0	
+	},
+	{
+		"img":"blackPepper",
+                "brand":"Catch",
+		"name":"Black Pepper",
+		"weight":"250 gm",
+		"price":"200",
+                "quantity":0	
+	},
+	{
+		"img":"cinnamon",
+                "brand":"MDH",
+		"name":"Cinnamon",
+		"weight":"300 gm",
+		"price":"180",
+                "quantity":0	
+	},
+	{
+		"img":"cloves",
+                "brand":"Catch",
+		"name":"Cloves",
+		"weight":"200 gm",
+		"price":"150",
+                "quantity":0	
+	},
+	{
+		"img":"corianderPowder",
+                "brand":"MDH",
+		"name":"Coriander Powder",
+		"weight":"100 gm",
+		"price":"120",
+                "quantity":0
+	},
+	{
+		"img":"cuminSeeds",
+                "brand":"MDH",
+		"name":"Cumin Seeds",
+		"weight":"250 gm",
+		"price":"200",
+                "quantity":0	
+	},
+	{
+		"img":"greenCardamom",
+                "brand":"Catch",
+		"name":"Green Cardamom",
+		"weight":"500 gm",
+		"price":"300",
+                "quantity":0	
+	},
+	{
+		"img":"holyBasil",
+                "brand":"MDH",
+		"name":"Holy Basil",
+		"weight":"100 gm",
+		"price":"100",
+                "quantity":0	
+	},
+	{
+		"img":"redChilliPowder",
+                "brand":"Catch",
+		"name":"Red Chilli Powder",
+		"weight":"520 gm",
+		"price":"250",
+                "quantity":0	
+	},
+	{
+		"img":"Tamarind",
+                "brand":"MDH",
+		"name":"Tamarind",
+		"weight":"100 gm",
+		"price":"50",
+                "quantity":0	
+	}]
+}

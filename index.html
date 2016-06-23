@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Shopping Cart </title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="assets/js/angular.min.js" type="text/javascript"></script>
+        <script src="assets/js/script.js" type="text/javascript"></script>
+    </head>
+
+    <body ng-app="cart" ng-controller="cartController">
+        <div >
+            <h1> Masalas and Spices </h1>
+
+            <section class="left-panel">
+                <div class="section" ng-repeat = "item in items">
+                    <img class="images" ng-src="assets/images/{{item.img}}.jpg" alt="{{item.name}}">
+                    <h5>{{item.brand}}</h5>
+                    <h3>{{item.name}}</h3>
+                    <h4>{{item.weight}}</h4>
+                    <h4> {{item.price| currency:'&#8360'}} </h4>
+
+                    <button ng-show="item.quantity == 0" ng-click="addItem(item, 1)">Add To Cart </button>
+                    <span ng-show="item.quantity > 0" style="margin:0 auto;">
+                        <button class="button-add" ng-click="addItem(item, + 1)">+</button>
+                        <button class="button-val" >{{item.quantity}} </button>
+                        <button class="button-minus" ng-click="addItem(item, - 1)">-</button>
+                    </span>
+                </div>     
+            </section>
+            <aside class="right-panel">
+                <h2> Your Cart Summary</h2>
+                <h4 ng-show = "getTotalCount() > 0" style="float:  left;">Total Items: {{getTotalCount()}}</h4>
+                <h4 ng-show = "getTotalPrice() > 0" style="float: right;">Total Price: {{getTotalPrice() | currency:'&#8360'}}</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- empty cart message -->
+                        <tr ng-hide="getTotalCount() > 0" >
+                            <td style="text-align:center;" colspan="5">
+                                Your cart is empty.
+                            </td>
+                        </tr> 
+                        <!-- cart items -->
+                        <tr ng-repeat="items in cart">
+                            <td>
+                                
+                                    <img class="images" ng-src="assets/images/{{items.img}}.jpg"  alt="{{items.name}}">
+                                    <div>
+                                        <h4>{{items.name}}</h4>
+                                    </div>
+                            </td>
+                            <td style="text-align: center">
+                                <strong>{{items.quantity}}</strong>
+                            </td>
+                            <td><strong>{{items.price| currency:'&#8360'}}</strong></td>
+                            <td><strong>{{getTotal(items) | currency:'&#8360'}}</strong></td>
+                            <td>
+                                <button style="background:red" type="button"  ng-click="removeItem(items)">
+                                    X
+                                </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+        </div>
+    </body>
+</html>
